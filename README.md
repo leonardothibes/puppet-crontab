@@ -1,4 +1,4 @@
 puppet-crontab
 ==============
 
-A puppet module to manage backups.
+A puppet module to manage crontab.
