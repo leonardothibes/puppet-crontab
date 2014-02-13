@@ -1,6 +1,6 @@
 class crontab::params
 {
-	$envpath  = ['/usr/local/sbin','/usr/local/bin','/sbin','/bin','/usr/sbin','/usr/bin']
+	$envpath  = ['/bin','/sbin','/usr/bin','/usr/sbin','/usr/local/bin','/usr/local/sbin']
 	$cronpath = '/etc/cron.d'
 	$confpath = '/etc/crontab'
 	$shell    = '/bin/sh'
