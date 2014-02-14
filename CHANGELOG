@@ -1,5 +1,10 @@
-2014-02-13 Leonardo Thibes <eu@leonardothibes.com> - 1.0.4
+2014-02-14 Leonardo Thibes <eu@leonardothibes.com> - 1.0.4
 ===========================================================
 
- Leonardo Thibes <eu@leonardothibes.com> (x):
-  * 
+ Leonardo Thibes <eu@leonardothibes.com> (6):
+  * Agendador de job por hora
+  * Agendador de job diário
+  * Agendador de job semanal
+  * Agendador de job mensal
+  * Agendar jobs com variáveis de ambiente
+  * Remover jobs já agendados
