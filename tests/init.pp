@@ -26,3 +26,10 @@ crontab::monthly {'monthly-test':
 	minute  => 30,
 	command => '/opt/svn/scripts/bkp.sh',
 }
+
+crontab::weekly {'weekly-test':
+	day     => 'tue',
+	hour    => 7,
+	minute  => 15,
+	command => '/root/scripts/bkp.sh',
+}
