@@ -5,7 +5,6 @@ class crontab::params
 	$confpath = '/etc/crontab'
 	$shell    = '/bin/sh'
 	$user     = 'root'
-	$group    = 'root'
 	$mode     = '0644'
 	$service  = 'cron'
 	$package  = 'cron'
