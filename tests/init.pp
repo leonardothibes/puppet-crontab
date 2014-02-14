@@ -19,3 +19,10 @@ crontab::hourly {'hourly-test':
 	minute  => 30,
 	command => '/var/lib/scripts/backup-svn.sh',
 }
+
+crontab::monthly {'monthly-test':
+	day     => 10,
+	hour    => 12,
+	minute  => 30,
+	command => '/opt/svn/scripts/bkp.sh',
+}
