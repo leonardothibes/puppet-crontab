@@ -4,6 +4,9 @@
 
 SHELL=<%=scope.lookupvar('crontab::params::shell')%>
 PATH=<%=scope.lookupvar('crontab::params::envpath').join(':')%>
+<% @env.each do |val| -%>
+<%=val%>
+<% end -%>
 
 # m h dom mon dow user command
 <%=@minute%> <%=@hour%> <%=@monthday%> <%=@month%> <%=@weekday%> <%=@user%> <%=@command%>

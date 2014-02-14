@@ -32,4 +32,8 @@ crontab::weekly {'weekly-test':
 	hour    => 7,
 	minute  => 15,
 	command => '/root/scripts/bkp.sh',
+	env     => [
+		'JAVA_HOME=/var/lib/jvm',
+		'MAILTO="user@empresa.com"',
+	],
 }
