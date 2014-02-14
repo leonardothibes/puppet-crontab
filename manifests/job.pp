@@ -11,6 +11,7 @@ define crontab::job(
 	$command,
 ) {
 	include crontab::params
+	include crontab
 	case $ensure {
 		'present','absent': { $real_ensure = $ensure }
 		default           : { fail("Invalid value \"${ensure}\" used for ensure") }
