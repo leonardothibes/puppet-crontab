@@ -4,6 +4,7 @@ define  crontab::job(
 	$minute   = '*',
 	$hour     = '*',
 	$monthday = '*',
+	$month    = '*',
 	$weekday  = '*',
 	$user     = $crontab::params::user,
 	$mode     = $crontab::params::mode,
