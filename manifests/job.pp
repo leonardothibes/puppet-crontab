@@ -10,7 +10,16 @@ define  crontab::job(
 	$env      = [],
 	$command,
 ) {
-	if $ensure != 'present' {
-		$ensure
+	case $ensure {
+		'present','absent': { $real_ensure = $ensure }
+		default           : { fail("Invalid value \"${ensure}\" used for ensure") }
+	}
+	file {"cronjob::${title}":
+		ensure  => $real_ensure,
+		owner   => $user,
+		group   => $group,
+		mode    => $mode,
+		path    => "${crontab::params::confpath}/${title}",
+		content => template('crontab/job.erb'),
 	}
 }
