@@ -14,3 +14,8 @@ crontab::daily {'daily-test':
 	minute  => 0,
 	command => 'rm -Rf /tmp/*',
 }
+
+crontab::hourly {'hourly-test':
+	minute  => 30,
+	command => '/var/lib/scripts/backup-svn.sh',
+}
