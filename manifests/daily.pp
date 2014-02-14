@@ -1,10 +1,9 @@
-include crontab::params
 define  crontab::daily(
 	$ensure = present,
 	$minute = 0,
 	$hour   = 0,
-	$user   = $crontab::params::user,
-	$mode   = $crontab::params::mode,
+	$user   = 'root',
+	$mode   = 0644,
 	$env    = [],
 	$command,
 ) {

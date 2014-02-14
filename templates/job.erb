@@ -1,11 +1,9 @@
 #########################################################################################
 ### This file is managed by Puppet, and is refreshed regularly. Do not edit manually! ###
 #########################################################################################
-## <%=@name%> Crontab Job ##
 
-SHELL=<%=@shell%>
-PATH=<%=@envpath.join(':')%>
+SHELL=<%=scope.lookupvar('crontab::params::shell')%>
+PATH=<%=scope.lookupvar('crontab::params::envpath').join(':')%>
 
-## Job Definition
 # m h dom mon dow user command
 <%=@minute%> <%=@hour%> <%=@monthday%> <%=@month%> <%=@weekday%> <%=@user%> <%=@command%>

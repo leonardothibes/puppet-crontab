@@ -3,9 +3,8 @@ class crontab::params
 	$envpath  = ['/bin','/sbin','/usr/bin','/usr/sbin','/usr/local/bin','/usr/local/sbin']
 	$cronpath = '/etc/cron.d'
 	$confpath = '/etc/crontab'
+	$jobpath  = '/etc/cron.d'
 	$shell    = '/bin/sh'
-	$user     = 'root'
-	$mode     = '0644'
 	$service  = 'cron'
 	$package  = 'cron'
 }
