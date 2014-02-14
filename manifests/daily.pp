@@ -1,7 +1,7 @@
 define  crontab::daily(
 	$ensure = present,
-	$minute = 0,
 	$hour   = 0,
+	$minute = 0,
 	$user   = 'root',
 	$mode   = 0644,
 	$env    = [],
