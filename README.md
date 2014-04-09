@@ -63,4 +63,4 @@ Principal developer:
 Support
 -------
 
-Please log tickets and issues at our [Projects site](https://github.com/leonardothibes/puppet-backup/issues)
+Please log tickets and issues at our [Projects site](https://github.com/leonardothibes/puppet-crontab/issues)
