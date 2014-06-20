@@ -1,6 +1,6 @@
 name    'leonardothibes-crontab'
 author  'leonardothibes'
-version '1.0.0'
+version '1.0.1'
 license 'MIT'
 summary 'A puppet module to manage crontab'
 description 'A puppet module to manage crontab'
