@@ -1,4 +1,4 @@
-define  crontab::weekly(
+define crontab::weekly(
 	$ensure = present,
 	$day    = mon,
 	$hour   = 0,
@@ -7,7 +7,7 @@ define  crontab::weekly(
 	$mode   = 0644,
 	$env    = [],
     $stdin  = '/dev/null',
-    $sterr  = '/dev/null',
+    $stderr = '/dev/null',
 	$command,
 ) {
 	crontab::job {$title:
@@ -21,7 +21,7 @@ define  crontab::weekly(
 		mode     => $mode,
 		env      => $env,
         stdin    => $stdin,
-        sterr    => $sterr,
+        stderr   => $stderr,
 		command  => $command,
 	}
 }

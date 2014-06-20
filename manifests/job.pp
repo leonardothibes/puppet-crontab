@@ -9,7 +9,7 @@ define crontab::job(
 	$mode     = 0644,
 	$env      = [],
 	$stdin    = '/dev/null',
-	$sterr    = '/dev/null',
+	$stderr   = '/dev/null',
 	$command,
 ) {
 	include crontab::params

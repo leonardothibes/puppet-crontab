@@ -1,11 +1,11 @@
-define  crontab::hourly(
+define crontab::hourly(
 	$ensure = present,
 	$minute = 0,
 	$user   = 'root',
 	$mode   = 0644,
 	$env    = [],
     $stdin  = '/dev/null',
-    $sterr  = '/dev/null',
+    $stderr = '/dev/null',
 	$command,
 ) {
 	crontab::job {$title:
@@ -19,7 +19,7 @@ define  crontab::hourly(
 		mode     => $mode,
 		env      => $env,
         stdin    => $stdin,
-        sterr    => $sterr,
+        stderr   => $stderr,
 		command  => $command,
 	}
 }

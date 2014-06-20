@@ -9,4 +9,4 @@ PATH=<%=scope.lookupvar('crontab::params::envpath').join(':')%>
 <% end -%>
 
 # m h dom mon dow user command
-<%=@minute%> <%=@hour%> <%=@monthday%> <%=@month%> <%=@weekday%> <%=@user%> <%=@command%>
+<%=@minute%> <%=@hour%> <%=@monthday%> <%=@month%> <%=@weekday%> <%=@user%> <%=@command%> 1> <%=@stdin%> 2> <%=@stderr%>
