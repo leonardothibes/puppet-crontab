@@ -6,6 +6,8 @@ define  crontab::monthly(
 	$user   = 'root',
 	$mode   = 0644,
 	$env    = [],
+    $stdin  = '/dev/null',
+    $sterr  = '/dev/null',
 	$command,
 ) {
 	crontab::job {$title:
@@ -18,6 +20,8 @@ define  crontab::monthly(
 		user     => $user,
 		mode     => $mode,
 		env      => $env,
+        stdin    => $stdin,
+        sterr    => $sterr,
 		command  => $command,
 	}
 }

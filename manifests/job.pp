@@ -8,6 +8,8 @@ define crontab::job(
 	$user     = 'root',
 	$mode     = 0644,
 	$env      = [],
+	$stdin    = '/dev/null',
+	$sterr    = '/dev/null',
 	$command,
 ) {
 	include crontab::params
