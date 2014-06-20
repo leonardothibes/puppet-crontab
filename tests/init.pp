@@ -9,15 +9,15 @@
 # Learn more about module testing here:
 # http://docs.puppetlabs.com/guides/tests_smoke.html
 #
+crontab::hourly {'hourly-test':
+	minute  => 30,
+	command => '/var/lib/scripts/backup-svn.sh',
+}
+
 crontab::daily {'daily-test':
 	hour    => 12,
 	minute  => 0,
 	command => 'rm -Rf /tmp/*',
-}
-
-crontab::hourly {'hourly-test':
-	minute  => 30,
-	command => '/var/lib/scripts/backup-svn.sh',
 }
 
 crontab::monthly {'monthly-test':
