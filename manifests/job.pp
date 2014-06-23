@@ -21,7 +21,7 @@ define crontab::job(
 	file {"cronjob::${title}":
 		ensure  => $real_ensure,
 		owner   => $user,
-		group   => $group,
+		group   => $user,
 		mode    => $mode,
 		path    => "${crontab::params::jobpath}/${title}",
 		content => template('crontab/job.erb'),
