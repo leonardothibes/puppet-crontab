@@ -6,7 +6,7 @@ define crontab::job(
 	$month    = '*',
 	$weekday  = '*',
 	$user     = 'root',
-	$mode     = 0644,
+	$mode     = 0755,
 	$env      = [],
 	$stdin    = '/dev/null',
 	$stderr   = '/dev/null',
