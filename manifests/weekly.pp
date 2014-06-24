@@ -6,7 +6,7 @@ define crontab::weekly(
 	$user   = 'root',
 	$mode   = 0644,
 	$env    = [],
-    $stdin  = '/dev/null',
+    $stdout = '/dev/null',
     $stderr = '/dev/null',
 	$command,
 ) {
@@ -20,7 +20,7 @@ define crontab::weekly(
 		user     => $user,
 		mode     => $mode,
 		env      => $env,
-        stdin    => $stdin,
+        stdout   => $stdout,
         stderr   => $stderr,
 		command  => $command,
 	}

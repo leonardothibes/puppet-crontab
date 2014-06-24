@@ -8,7 +8,7 @@ define crontab::job(
 	$user     = 'root',
 	$mode     = 0755,
 	$env      = [],
-	$stdin    = '/dev/null',
+	$stdout   = '/dev/null',
 	$stderr   = '/dev/null',
 	$command,
 ) {
