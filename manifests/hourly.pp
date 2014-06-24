@@ -2,7 +2,7 @@ define crontab::hourly(
 	$ensure = present,
 	$minute = 0,
 	$user   = 'root',
-	$mode   = 0644,
+	$mode   = 0755,
 	$env    = [],
     $stdout = '/dev/null',
     $stderr = '/dev/null',
