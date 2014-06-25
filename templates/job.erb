@@ -18,3 +18,4 @@ PATH=<%=scope.lookupvar('crontab::params::envpath').join(':')%>
 # *  *  *  *  * username command-to-be-executed
 # m h dom mon dow username command
 <%=@minute%> <%=@hour%> <%=@monthday%> <%=@month%> <%=@weekday%> <%=@user%> <%=@command%> 1>> <%=@stdout%> 2>> <%=@stderr%>
+
