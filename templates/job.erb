@@ -2,7 +2,7 @@
 ### This file is managed by Puppet, and is refreshed regularly. Do not edit manually! ###
 #########################################################################################
 
-SHELL=<%=scope.lookupvar('crontab::params::shell')%>
+SHELL=<%=scope.lookupvar('crontab::shell')%>
 PATH=<%=scope.lookupvar('crontab::params::envpath').join(':')%>
 <% @env.each do |val| -%>
 <%=val%>
