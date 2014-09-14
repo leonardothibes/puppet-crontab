@@ -1,5 +1,6 @@
-class crontab inherits crontab::params
-{
+class crontab (
+    $shell = $crontab::params::shell
+) inherits crontab::params {  
 	if $osfamily != 'Debian' {
 		fail("Unsupported platform: ${osfamily}/${operatingsystem}")
 	}
