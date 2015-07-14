@@ -12,15 +12,15 @@ class crontab inherits crontab::params
 	service {'crontab::service::run':
 		ensure  => running,
 		name    => $crontab::params::service,
-		require => Package[$crontab::params::package],
+		require => Package['crontab::package::install'],
 	}
 
 	file {$crontab::params::confpath:
 		ensure  => present,
 		owner   => root,
 		group   => root,
-		mode    => 0644,
+		mode    => '0644',
 		content => template('crontab/crontab.erb'),
-		require => Package[$crontab::params::package],
+		require => Package['crontab::package::install'],
 	}
 }

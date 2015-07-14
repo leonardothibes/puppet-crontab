@@ -3,7 +3,7 @@ define crontab::daily(
 	$hour    = 0,
 	$minute  = 0,
 	$user    = 'root',
-	$mode    = 0755,
+	$mode    = '0755',
 	$env     = [],
     $stdout  = '/dev/null',
     $stderr  = '/dev/null',
