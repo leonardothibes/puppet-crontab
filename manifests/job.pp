@@ -32,7 +32,7 @@ define crontab::job(
 	}
 
 	file {"cronjob::${title}":
-		ensure  => $real_ensure,
+		ensure  => $ensure,
 		owner   => $user,
 		group   => $user,
 		mode    => $mode,
